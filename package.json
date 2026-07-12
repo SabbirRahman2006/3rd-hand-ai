@@ -1,0 +1,53 @@
+{
+  "name": "3rd-hand-ai",
+  "version": "1.0.0",
+  "description": "3rd Hand AI — a fully local, offline-first AI desktop workspace: chat, notes, tasks, and real recon tooling, powered entirely by Ollama.",
+  "main": "dist/main.js",
+  "homepage": "./",
+  "author": {
+    "name": "Sabbir Rahman",
+    "url": "https://github.com/SabbirRahman2006"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SabbirRahman2006/3rd-hand-ai.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build:main": "tsc",
+    "build:renderer": "esbuild src/renderer/index.tsx --bundle --outfile=dist/renderer/index.js --jsx=automatic --loader:.tsx=tsx",
+    "build:css": "tailwindcss -i src/renderer/styles.css -o dist/renderer/styles.css --minify",
+    "build:html": "node scripts/copy-html.js",
+    "build": "npm run build:main && npm run build:renderer && npm run build:css && npm run build:html",
+    "dev": "npm run build && electron .",
+    "dist": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "esbuild": "^0.19.8",
+    "lucide-react": "^0.292.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
+  },
+  "build": {
+    "appId": "com.thirdhandai.app",
+    "productName": "3rd Hand AI",
+    "directories": { "output": "release" },
+    "files": ["dist/**/*", "node_modules/**/*", "build/icon.png"],
+    "icon": "build/icon.png",
+    "win": { "icon": "build/icon.ico", "target": "nsis" },
+    "mac": { "icon": "build/icon.icns" },
+    "linux": { "icon": "build/icon.png" }
+  }
+}
