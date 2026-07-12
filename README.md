@@ -5,6 +5,10 @@ A fully local, offline-first AI desktop workspace for developers and security le
 ![status](https://img.shields.io/badge/status-active-brightgreen) ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue) ![license](https://img.shields.io/badge/local--first-100%25-purple)
 
 ---
+<img width="1263" height="641" alt="image" src="https://github.com/user-attachments/assets/2505781d-f801-4ef3-860c-7136f831a1cc" />
+<img width="901" height="464" alt="image" src="https://github.com/user-attachments/assets/2b97cc4f-f716-4ede-9530-d4be3addb695" />
+<img width="216" height="168" alt="image" src="https://github.com/user-attachments/assets/54819af7-0653-469c-8464-a5c9c0a161c5" />
+
 
 ## Why this exists
 
